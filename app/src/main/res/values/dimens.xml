@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="actionBarElevation">4dp</dimen>
+    <dimen name="appNameTextSize">18sp</dimen>
+    <dimen name="rvMascotasPadding">15dp</dimen>
+    <dimen name="huesosTamaño">34dp</dimen>
+</resources>

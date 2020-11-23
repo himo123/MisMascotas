@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mis Mascotas</string>
+    <string name="tarea_name">Petagram</string>
+    <string name="favoritos">5 Favoritos</string>
+    <string name="btn_favoritos">5</string>
+    <string name="pnombre">nombre</string>
+    <string name="praza">raza</string>
+    <string name="pfoto">email</string>
+    <string name="prating">rating</string>
+</resources>

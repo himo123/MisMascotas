@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:elevation="@dimen/actionBarElevation"
+    app:title="@string/tarea_name">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:paddingEnd="@dimen/rvMascotasPadding"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_favoritos"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:drawable/btn_star_big_off"
+            android:contentDescription="@string/favoritos"
+            android:text="@string/btn_favoritos"
+            android:onClick="mostrarMascotasFavoritas"
+            android:textStyle="bold"/>
+
+    </GridLayout>
+
+</androidx.appcompat.widget.Toolbar>
