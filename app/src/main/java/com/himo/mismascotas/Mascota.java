@@ -2,7 +2,10 @@ package com.himo.mismascotas;
 
 public class Mascota implements Comparable {
     private String nombre;
+    //private String tipo; //perro, gato, loro
     private String raza;
+    //private int edad;
+    //private String genero; //macho, hembra
     private int foto;
     private int rating;
 

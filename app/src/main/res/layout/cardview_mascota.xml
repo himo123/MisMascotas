@@ -21,6 +21,7 @@
             android:layout_width="260dp"
             android:layout_height="260dp"
             android:layout_gravity="center"
+            android:scaleType="fitCenter"
             android:contentDescription="@string/pfoto"
             android:src="@drawable/dibujo_perro"/>
 
