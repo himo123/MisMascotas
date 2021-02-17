@@ -1,6 +1,9 @@
 package com.himo.mismascotas;
 
-public class Mascota implements Comparable {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Mascota implements Comparable, Parcelable {
     private String nombre;
     //private String tipo; //perro, gato, loro
     private String raza;
@@ -15,6 +18,25 @@ public class Mascota implements Comparable {
         this.foto = foto;
         this.rating = rating;
     }
+
+    protected Mascota(Parcel in) {
+        nombre = in.readString();
+        raza = in.readString();
+        foto = in.readInt();
+        rating = in.readInt();
+    }
+
+    public static final Creator<Mascota> CREATOR = new Creator<Mascota>() {
+        @Override
+        public Mascota createFromParcel(Parcel in) {
+            return new Mascota(in);
+        }
+
+        @Override
+        public Mascota[] newArray(int size) {
+            return new Mascota[size];
+        }
+    };
 
     public String getNombre() {
         return nombre;
@@ -52,5 +74,18 @@ public class Mascota implements Comparable {
     public int compareTo(Object o) {
         int comparaLikes = ((Mascota)o).getRating();   //este código lo copie de internet para ordenar las mascotas según su rating
         return comparaLikes - this.rating;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(nombre);
+        parcel.writeString(raza);
+        parcel.writeInt(foto);
+        parcel.writeInt(rating);
     }
 }
